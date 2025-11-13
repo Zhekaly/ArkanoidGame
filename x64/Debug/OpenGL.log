@@ -1,0 +1,10 @@
+﻿  task1.cpp
+C:\Users\jenis\source\repos\OpenGL\OpenGL\task1.cpp(315,16): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\task1.cpp(316,16): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\task1.cpp(317,16): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\task1.cpp(333,31): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\task1.cpp(334,31): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\task1.cpp(335,31): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  OpenGL.vcxproj -> C:\Users\jenis\source\repos\OpenGL\x64\Debug\OpenGL.exe
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\bin\x64\freeglut.dll
+  Скопировано файлов:         1.
