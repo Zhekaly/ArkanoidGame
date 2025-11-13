@@ -1,0 +1,7 @@
+﻿  creative.cpp
+C:\Users\jenis\source\repos\OpenGL\OpenGL\creative.cpp(735,38): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\creative.cpp(735,28): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\creative.cpp(745,38): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\creative.cpp(745,28): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+LINK : warning LNK4098: библиотека по умолчанию "MSVCRT" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
+  creative.vcxproj -> C:\Users\jenis\source\repos\OpenGL\x64\Debug\creative.exe

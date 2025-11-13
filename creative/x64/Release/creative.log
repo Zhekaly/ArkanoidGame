@@ -1,0 +1,8 @@
+﻿  creative.cpp
+C:\Users\jenis\source\repos\OpenGL\OpenGL\creative.cpp(45,17): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\creative.cpp(53,17): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\creative.cpp(61,18): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\creative.cpp(62,18): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\creative.cpp(65,45): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\Users\jenis\source\repos\OpenGL\OpenGL\creative.cpp(65,91): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+LINK : fatal error LNK1104: не удается открыть файл "C:\Users\jenis\source\repos\OpenGL\x64\Release\creative.exe"
