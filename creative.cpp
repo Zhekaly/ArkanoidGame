@@ -272,21 +272,17 @@ void drawBigText(const std::string& text, float x, float y, float scale, glm::ve
             drawRect(currentX, y + charH * 0.4f, charW, thick, color, program, VAO, proj);
             break;
         case 'M': {
-            // ����� ���������
             drawRect(currentX, y, thick, charH, color, program, VAO, proj);
-            // ������ ���������
             drawRect(currentX + charW - thick, y, thick, charH, color, program, VAO, proj);
 
-            // ����� ��������� (������ ����� ���� � ������)
             for (float i = 0; i < charH / 2.0f; i += thick) {
-                float dx = i * (charW / (charH)); // ��� ������
-                float dy = i;                      // ��� ����
+                float dx = i * (charW / (charH)); 
+                float dy = i;                      
                 drawRect(currentX + dx, y + charH - i - thick, thick, thick, color, program, VAO, proj);
             }
 
-            // ������ ��������� (������ ������ ���� � ������)
             for (float i = 0; i < charH / 2.0f; i += thick) {
-                float dx = i * (charW / (charH)); // ��� �����
+                float dx = i * (charW / (charH));
                 drawRect(currentX + charW - dx - thick, y + charH - i - thick, thick, thick, color, program, VAO, proj);
             }
             break;
@@ -306,15 +302,13 @@ void drawBigText(const std::string& text, float x, float y, float scale, glm::ve
             drawRect(currentX, y, charW, thick, color, program, VAO, proj);
             break;
         case 'V': {
-            // ����� ��������� � ��� �� ����� ����� � ���� �� ������
             for (float i = 0; i < charH; i += thick) {
-                float dx = (i / charH) * (charW * 0.5f); // �������� ������
+                float dx = (i / charH) * (charW * 0.5f); 
                 drawRect(currentX + dx, y + charH - i - thick, thick, thick, color, program, VAO, proj);
             }
 
-            // ������ ��������� � �� ����� ������ � ���� �� ������
             for (float i = 0; i < charH; i += thick) {
-                float dx = (i / charH) * (charW * 0.5f); // �������� �����
+                float dx = (i / charH) * (charW * 0.5f); 
                 drawRect(currentX + charW - dx - thick, y + charH - i - thick, thick, thick, color, program, VAO, proj);
             }
             break;
@@ -322,21 +316,15 @@ void drawBigText(const std::string& text, float x, float y, float scale, glm::ve
 
                 break;
         case 'R': {
-            // ����� ���������
             drawRect(currentX, y, thick, charH, color, program, VAO, proj);
-
-            // ������� �����������
             drawRect(currentX, y + charH - thick, charW * 0.7f, thick, color, program, VAO, proj);
 
-            // ������� ����������� (�������� "������")
             drawRect(currentX, y + charH * 0.55f, charW * 0.7f, thick, color, program, VAO, proj);
 
-            // ������ ��������� ������� ����� ("������")
             drawRect(currentX + charW * 0.7f - thick, y + charH * 0.55f, thick, charH * 0.45f - thick, color, program, VAO, proj);
 
-            // ������������ ���� � �� �������� ���� ����� (�����������)
             for (float i = 0; i < charH * 0.45f; i += thick) {
-                float dx = (i / (charH * 0.45f)) * (charW * 0.4f); // �������� �����
+                float dx = (i / (charH * 0.45f)) * (charW * 0.4f); 
                 drawRect(currentX + charW * 0.7f - dx - thick, y + i, thick, thick, color, program, VAO, proj);
             }
             break;
@@ -349,17 +337,14 @@ void drawBigText(const std::string& text, float x, float y, float scale, glm::ve
             float midX = currentX + charW * 0.5f;
             float halfW = charW * 0.5f;
 
-            // ����� ���������
             drawRect(currentX, y + charH * 0.5f, thick, charH * 0.5f, color, program, VAO, proj);
             glPushMatrix();
             glTranslatef(currentX + halfW * 0.25f, y + charH * 0.75f, 0);
             glRotatef(45, 0, 0, 1);
             glPopMatrix();
 
-            // ������ ��������� (���������)
             drawRect(currentX + charW - thick, y + charH * 0.5f, thick, charH * 0.5f, color, program, VAO, proj);
 
-            // ������ �����
             drawRect(midX - thick * 0.5f, y, thick, charH * 0.5f, color, program, VAO, proj);
             break;
         }
@@ -381,14 +366,11 @@ void drawBigText(const std::string& text, float x, float y, float scale, glm::ve
             drawRect(currentX, y + charH - thick, charW, thick, color, program, VAO, proj);
             break;
         case 'N': {
-            // ����� ���������
             drawRect(currentX, y, thick, charH, color, program, VAO, proj);
 
-            // ������ ���������
             drawRect(currentX + charW - thick, y, thick, charH, color, program, VAO, proj);
 
-            // ��������� (�� ������� ������� � ����� �������)
-            int segments = 10; // ���������� ��������������� ��� ���������
+            int segments = 10; 
             for (int i = 0; i < segments; i++) {
                 float t = (float)i / segments;
                 float segX = currentX + (1.0f - t) * (charW - thick);
@@ -429,7 +411,7 @@ void key_callback(GLFWwindow* w, int key, int sc, int action, int mods) {
 }
 
 int main() {
-    srand((unsigned int)time(nullptr)); // Инициализация генератора случайных чисел
+    srand((unsigned int)time(nullptr));
 
     if (!glfwInit()) { std::cerr << "GLFW init failed\n"; return -1; }
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -543,7 +525,6 @@ int main() {
             if (paddle.pos.x < 0) paddle.pos.x = 0;
             if (paddle.pos.x + paddle.size.x > WINDOW_W) paddle.pos.x = WINDOW_W - paddle.size.x;
 
-            // Обновление пауэр-апов
             for (auto& pu : powerUps) {
                 if (!pu.active) continue;
                 pu.pos += pu.vel * dt;
@@ -552,11 +533,9 @@ int main() {
                 }
             }
 
-            // Очистка неактивных пауэр-апов
             powerUps.erase(std::remove_if(powerUps.begin(), powerUps.end(),
                 [](const PowerUp& pu) { return !pu.active; }), powerUps.end());
 
-            // Обновление шаров
             bool ballLost = false;
             for (auto& ball : balls) {
                 ball.pos += ball.vel * dt;
@@ -584,13 +563,12 @@ int main() {
                         if (fabs(diff.x) > fabs(diff.y)) ball.vel.x *= -1.0f;
                         else ball.vel.y *= -1.0f;
 
-                        // Случайное выпадение пауэр-апа (30% вероятность)
                         if (rand() % 100 < 30) {
                             PowerUp pu;
                             pu.pos = glm::vec2(b.s.pos.x + b.s.size.x * 0.5f, b.s.pos.y);
                             pu.vel = glm::vec2(0.0f, -100.0f);
                             pu.size = glm::vec2(30.0f, 30.0f);
-                            pu.type = (PowerUpType)(rand() % 2); // Случайный тип
+                            pu.type = (PowerUpType)(rand() % 2); 
                             pu.active = true;
                             pu.tex = (pu.type == MULTIBALL) ? tex_ball : tex_heart;
                             powerUps.push_back(pu);
@@ -600,7 +578,6 @@ int main() {
                 }
             }
 
-            // Обработка потери шара
             if (ballLost) {
                 balls.erase(std::remove_if(balls.begin(), balls.end(),
                     [](const Ball& b) { return b.pos.y - b.radius < 0; }), balls.end());
@@ -621,7 +598,6 @@ int main() {
                 }
             }
 
-            // Проверка столкновения пауэр-апов с ракеткой
             for (auto& pu : powerUps) {
                 if (!pu.active) continue;
                 if (pu.pos.x + pu.size.x > paddle.pos.x &&
@@ -630,20 +606,17 @@ int main() {
                     pu.pos.y < paddle.pos.y + paddle.size.y) {
 
                     if (pu.type == MULTIBALL) {
-                        // Создаем дополнительные шары из существующих
                         std::vector<Ball> newBalls;
-                        int ballsToCreate = std::min(3, (int)balls.size()); // Максимум 3 дополнительных шара
+                        int ballsToCreate = std::min(3, (int)balls.size());
                         for (int i = 0; i < ballsToCreate; i++) {
                             const Ball& existingBall = balls[i % balls.size()];
                             Ball newBall = existingBall;
-                            // Создаем шар с немного другим углом (от -45 до +45 градусов)
                             float baseAngle = atan2(existingBall.vel.y, existingBall.vel.x);
                             float angleOffset = ((rand() % 90) - 45) * 3.14159f / 180.0f;
                             float newAngle = baseAngle + angleOffset;
                             float speed = glm::length(existingBall.vel);
                             newBall.vel.x = cos(newAngle) * speed;
                             newBall.vel.y = sin(newAngle) * speed;
-                            // Убеждаемся, что шар летит вверх
                             if (newBall.vel.y < 0) newBall.vel.y = -newBall.vel.y;
                             newBalls.push_back(newBall);
                         }
@@ -696,14 +669,13 @@ int main() {
             transparentSprites.push_back(spB);
         }
 
-        // Отрисовка пауэр-апов
         for (const auto& pu : powerUps) {
             if (!pu.active) continue;
             Sprite spPU;
             spPU.pos = pu.pos;
             spPU.size = pu.size;
             spPU.tex = pu.tex;
-            spPU.color = glm::vec4(1.0f, 1.0f, 0.5f, 1.0f); // Желтоватый оттенок для визуального отличия
+            spPU.color = glm::vec4(1.0f, 1.0f, 0.5f, 1.0f); 
             spPU.transparent = true;
             spPU.depth = 0.0f;
             transparentSprites.push_back(spPU);
